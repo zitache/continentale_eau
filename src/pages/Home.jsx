@@ -16,7 +16,7 @@ export default function Home() {
     stat: '100%',
     statLabel: 'Pure',
     gradient: 'from-blue-600 to-cyan-600',
-    image: '/assets/sachet.png'
+    image: '/assets/sachet.png',
     },
     {
       title: 'Livraison',
@@ -26,6 +26,7 @@ export default function Home() {
       stat: '2h',
       statLabel: 'Livraison',
       gradient: 'from-green-600 to-emerald-600',
+      image: '/assets/hero-water.jpg',
     },
     {
       title: 'Clients',
@@ -35,6 +36,7 @@ export default function Home() {
       stat: '10K+',
       statLabel: 'Clients',
       gradient: 'from-purple-600 to-pink-600',
+      image: '/assets/bonbonne.jpg',
     },
   ]
 
@@ -78,6 +80,7 @@ export default function Home() {
       badgeColor: 'bg-yellow-500 text-black',
       features: ['Eau purifiée', 'Hygiénique'],
       buttonColor: 'bg-blue-600 hover:bg-blue-700',
+      image: '/assets/sachet.png',
     },
     {
       id: 2,
@@ -89,6 +92,7 @@ export default function Home() {
       badgeColor: 'bg-green-600 text-white',
       features: ['22L d\'eau pure', 'Réutilisable'],
       buttonColor: 'bg-green-600 hover:bg-green-700',
+      image: '/assets/bonbonne.jpg',
     },
   ]
 
@@ -179,11 +183,11 @@ export default function Home() {
                     </Link>
 
                     <a
-                      href="tel:+22800000000"
+                      href="tel:+228 91 29 99 99"
                       className="inline-flex items-center justify-center rounded-full px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-700 transition"
                     >
                       <Phone className="w-5 h-5 mr-2" />
-                      +228 XX XX XX XX
+                      +228 91 29 99 99
                     </a>
                   </div>
                 </div>
@@ -191,7 +195,7 @@ export default function Home() {
                       <div className="relative hidden lg:block">
                         <div className="relative z-10">
                           <img
-                            src="/placeholder.svg?height=600&width=800"
+                            src={slide.image}
                             alt={slide.title}
                             className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
                           />
@@ -253,8 +257,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {products.map((product) => (
               <div key={product.id} className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className={`relative h-64 bg-gradient-to-br ${product.gradient} flex items-center justify-center`}>
-                  <img src="/placeholder.svg?height=200&width=200" alt={product.name} className="w-32 h-32 object-contain animate-float" />
+                <div className={`relative h-64 bg-gradient-to-br ${product.gradient} flex items-center justify-center overflow-hidden`}>
+                  <img src={product.image} alt={product.name} className="w-full h-full object-cover" onError={(e) => { e.target.src = '/placeholder.svg?height=200&width=200' }} />
                   <div className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold absolute top-4 right-4 ${product.badgeColor} animate-pulse`}>
                     {product.badge}
                   </div>
