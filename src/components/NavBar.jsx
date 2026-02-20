@@ -16,7 +16,7 @@ export default function NavBar() {
       <div className="container-wide py-2 flex items-center justify-between gap-4">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <img src="/logo_eau.png" alt="Logo Intercontinental Eau" className="h-14 w-14 object-contain" />
+          <img src="/logo.svg" alt="Logo Intercontinental Eau" className="h-14 w-14 object-contain" />
           <div>
             <Link to="/" className="text-base font-bold text-gray-800">EAU CONTINENTALE</Link>
           </div>
