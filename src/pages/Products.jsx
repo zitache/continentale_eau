@@ -508,7 +508,7 @@ export default function Products() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Prêt à Commander Votre Eau Pure ?
           </h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
